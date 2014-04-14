@@ -6,12 +6,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import de.unikoblenz.west.ldim.index.IndexWriter;
 import de.unikoblenz.west.ldim.index.KeyValueEntry;
 
 public abstract class IndexAggregator {

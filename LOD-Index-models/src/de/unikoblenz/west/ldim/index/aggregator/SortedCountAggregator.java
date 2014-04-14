@@ -1,6 +1,5 @@
 package de.unikoblenz.west.ldim.index.aggregator;
 
-import java.io.OutputStream;
 import java.io.PrintStream;
 
 import de.unikoblenz.west.ldim.index.IndexWriter;

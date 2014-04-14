@@ -2,6 +2,12 @@ package de.unikoblenz.west.ldim.eval.density;
 
 import java.util.TreeMap;
 
+/**
+ * @deprecated
+ * 
+ * @author gottron
+ *
+ */
 public class DeletedInterpolationDistribution extends FrequencyAdjustedDistribution {
 
 	@Override

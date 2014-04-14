@@ -1,20 +1,28 @@
 package de.unikoblenz.west.ldim.eval;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
 
 import de.unikoblenz.west.ldim.eval.density.Distribution;
-import de.unikoblenz.west.ldim.index.IndexWriter;
-import de.unikoblenz.west.ldim.io.ZipBufferedReaderHandler;
 
+/**
+ * Various methods for comparing two distributions.
+ * 
+ * @author Thomas Gottron
+ */
 public class DistributionCompare {
 
+	/**
+	 * Basis to be used for all logarithms.
+	 */
 	public final static int ENTROPY_BASE = 2;
-	
 
+	/**
+	 * Compute the perplexity of using the base distribution to approacimate the actual distribution
+	 * 
+	 * @param base
+	 * @param actual
+	 * @return
+	 */
 	public double perplexity(Distribution base, Distribution actual) {
 		double result = 0;
 		double crossEntropy = this.crossEntropy(base, actual);
@@ -29,20 +37,19 @@ public class DistributionCompare {
 	 */
 	public double crossEntropy(Distribution base, Distribution actual) {
 		double result = 0;
-		base.resetHitMissCount();
-		double pSum = 0;
-		double qSum = 0;
 		for (String x : actual.getEvents()) {
 			double p = base.probability(x);
-			pSum += p;
 			double q = actual.probability(x);
-			qSum += q;
 			result += -q * this.logLocalBase(p);
 		}
-		base.printHitMissStats();
 		return result;
 	}
 	
+	/**
+	 * Compute the entropy of a distribution
+	 * @param dist
+	 * @return
+	 */
 	public double entropy(Distribution dist) {
 		double result = 0;
 		for (String x : dist.getEvents()) {
@@ -52,16 +59,32 @@ public class DistributionCompare {
 		return result;
 	}
 	
+	/**
+	 * Compute the normalized entropy
+	 * @param dist
+	 * @return
+	 */
 	public double entropyNorm(Distribution dist) {
 		double result = this.entropy(dist);
 		result /= -this.logLocalBase( 1./dist.getEvents().size());
 		return result;
 	}
 	
+	/**
+	 * Internal logarithm function to consistently use the pre-set log base.
+	 * @param x
+	 * @return
+	 */
 	public double logLocalBase(double x) {
 		return (Math.log(x) / Math.log(ENTROPY_BASE));
 	}
 	
+	/**
+	 * Compute the Kullback Leibler divergence from the base to the actual distribution, i.e. using the base distribution to approximate the actual distribution.
+	 * @param base
+	 * @param actual
+	 * @return
+	 */
 	public double kullbackLeibler(Distribution base, Distribution actual) {
 		double result = 0;
 		result = this.crossEntropy(base,actual) - this.entropy(actual);
@@ -104,15 +127,15 @@ public class DistributionCompare {
 	 * Jacard similarity over the sets of events between the other and this
 	 * distribution.
 	 * 
-	 * @param atual
+	 * @param actual
 	 * @return
 	 */
-	public double jacardSimilarityEvents(Distribution base, Distribution atual) {
+	public double jacardSimilarityEvents(Distribution base, Distribution actual) {
 		double result = 0;
 		TreeSet<String> intersection = new TreeSet<String>();
 		TreeSet<String> union  = new TreeSet<String>();
-		intersection.addAll(atual.getEvents());
-		union.addAll(atual.getEvents());
+		intersection.addAll(actual.getEvents());
+		union.addAll(actual.getEvents());
 		intersection.retainAll(base.getEvents());
 		union.addAll(base.getEvents());
 		result = intersection.size();

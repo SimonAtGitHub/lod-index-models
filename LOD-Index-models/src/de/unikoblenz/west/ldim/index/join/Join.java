@@ -3,7 +3,6 @@ package de.unikoblenz.west.ldim.index.join;
 import java.io.File;
 import java.io.IOException;
 
-import de.unikoblenz.west.ldim.index.IndexWriter;
 import de.unikoblenz.west.ldim.index.KeyValueEntry;
 import de.unikoblenz.west.ldim.index.RandomAccessIndexReader;
 import de.unikoblenz.west.ldim.index.SequentialIndexReader;

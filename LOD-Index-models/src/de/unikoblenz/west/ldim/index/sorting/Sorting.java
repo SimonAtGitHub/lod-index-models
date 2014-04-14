@@ -232,10 +232,10 @@ public abstract class Sorting<T> {
 			BufferedReader readerIn = inHandler.getBufferedReader();
 			TreeSet<T> buffer = new TreeSet<T>(comparator);
 			String line = null;
-			int cnt = 0;
+//			int cnt = 0;
 			while ( (line = readerIn.readLine()) != null) {
 				T object = this.fromLine(line);
-				cnt++;
+//				cnt++;
 //				if (cnt%100000 == 0) {
 //					System.out.print(".");
 //					if (cnt%2000000 == 0) {

@@ -1,7 +1,6 @@
 package de.unikoblenz.west.ldim.eval;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 
 import de.unikoblenz.west.ldim.tools.Utilities;

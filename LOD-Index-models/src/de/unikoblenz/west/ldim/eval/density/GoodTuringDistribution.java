@@ -1,6 +1,5 @@
 package de.unikoblenz.west.ldim.eval.density;
 
-import java.util.TreeMap;
 
 public class GoodTuringDistribution extends FrequencyAdjustedDistribution {
 

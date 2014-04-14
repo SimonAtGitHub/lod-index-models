@@ -1,5 +1,11 @@
 package de.unikoblenz.west.ldim.tools;
 
+/**
+ * Class for storing constant values, such as RDF Type classes.
+ * 
+ * @author Thomas Gottron
+ *
+ */
 public class Constants {
 
 	/**

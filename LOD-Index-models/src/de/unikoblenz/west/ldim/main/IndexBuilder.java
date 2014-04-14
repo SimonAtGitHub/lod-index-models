@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.util.TreeSet;
 
 import de.unikoblenz.west.ldim.index.ResourceManager;
-import de.unikoblenz.west.ldim.index.aggregator.CountAggregator;
 import de.unikoblenz.west.ldim.index.aggregator.IndexAggregator;
-import de.unikoblenz.west.ldim.index.aggregator.InvertedIndexAggregator;
 import de.unikoblenz.west.ldim.index.aggregator.SortedCountAggregator;
 import de.unikoblenz.west.ldim.index.aggregator.SortedInvertedIndexAggregator;
 

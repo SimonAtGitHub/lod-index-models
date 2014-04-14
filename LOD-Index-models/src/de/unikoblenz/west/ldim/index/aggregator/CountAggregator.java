@@ -1,14 +1,16 @@
 package de.unikoblenz.west.ldim.index.aggregator;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 
 import de.unikoblenz.west.ldim.index.IndexWriter;
 import de.unikoblenz.west.ldim.index.KeyValueEntry;
 
+/**
+ * @deprecated
+ * @author gottron
+ *
+ */
 public class CountAggregator extends IndexAggregator {
 
 	private HashMap<String, Integer> counter = new HashMap<String, Integer>();

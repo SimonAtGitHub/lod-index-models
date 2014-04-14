@@ -1,10 +1,7 @@
 package de.unikoblenz.west.ldim.io;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintStream;
 
 public class NQuadWriter {
 
@@ -13,13 +10,21 @@ public class NQuadWriter {
 	
 	
 	public NQuadWriter(File output) throws IOException {
+		this(output, false);
+	}
+		
+	public NQuadWriter(File output, boolean append) throws IOException {
 		this.outputFile = output;
 		if (this.outputFile.getName().endsWith(".gz")) {
-			this.writer = new GZipPrintStreamHandler(this.outputFile);
+			this.writer = new GZipPrintStreamHandler(this.outputFile, append);
 		} else if (this.outputFile.getName().endsWith(".zip")) {
-			this.writer = new ZipPrintStreamHandler(this.outputFile);
+			if (append) {
+				throw new UnsupportedOperationException("Appending to ZIP compressed files not supported");
+			} else {
+				this.writer = new ZipPrintStreamHandler(this.outputFile);
+			}
 		} else {
-			this.writer = new UncompressedPrintStreamHandler(this.outputFile); 
+			this.writer = new UncompressedPrintStreamHandler(this.outputFile, append); 
 		}
 	}
 	

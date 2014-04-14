@@ -13,6 +13,13 @@ import de.unikoblenz.west.ldim.io.UncompressedPrintStreamHandler;
 import de.unikoblenz.west.ldim.io.ZipBufferedReaderHandler;
 import de.unikoblenz.west.ldim.io.ZipPrintStreamHandler;
 
+
+/**
+ * The default sorting which compares all lines in file using the String comparison
+ * 
+ * @author Thomas Gottron
+ *
+ */
 public class DefaultSorting extends Sorting<String> {
 
 	@Override

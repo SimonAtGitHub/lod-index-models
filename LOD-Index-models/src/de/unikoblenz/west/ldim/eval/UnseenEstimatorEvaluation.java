@@ -11,6 +11,11 @@ import de.unikoblenz.west.ldim.eval.density.MLEDistribution;
 import de.unikoblenz.west.ldim.eval.density.OneUnseenEvent;
 import de.unikoblenz.west.ldim.eval.density.UnseenEventEstimator;
 
+/**
+ * @deprecated
+ * @author Thomas Gottron
+ *
+ */
 public class UnseenEstimatorEvaluation {
 
 	public final static UnseenEventEstimator[] ests = {
