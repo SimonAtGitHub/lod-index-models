@@ -1,5 +1,11 @@
 package de.unikoblenz.west.ldim.eval.density;
 
+/**
+ * @deprecated
+ * @author gottron
+ *
+ */
+
 public class GoodTuringUnseenEstimator extends UnseenEventEstimator {
 
 	@Override

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 /**
- * Abstractio layer for working with BufferedReaders. This allows for using
+ * Abstraction layer for working with BufferedReaders. This allows for using
  * different types of Readers, e.g. for reading from compressed files, while
  * maintaining the same method interface.
  * 

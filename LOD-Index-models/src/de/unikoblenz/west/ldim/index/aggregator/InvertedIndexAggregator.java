@@ -1,6 +1,5 @@
 package de.unikoblenz.west.ldim.index.aggregator;
 
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.TreeSet;
 
@@ -8,6 +7,11 @@ import de.unikoblenz.west.ldim.index.IndexWriter;
 import de.unikoblenz.west.ldim.index.KeyValueEntry;
 import de.unikoblenz.west.ldim.tools.Utilities;
 
+/**
+ * @deprecated
+ * @author gottron
+ *
+ */
 public class InvertedIndexAggregator extends IndexAggregator {
 
 	private String lastKey = null;

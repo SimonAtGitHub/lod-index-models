@@ -1,6 +1,11 @@
 package de.unikoblenz.west.ldim.eval.density;
 
 
+/**
+ * @deprecated
+ * @author gottron
+ *
+ */
 public class GoodTuringDistribution extends FrequencyAdjustedDistribution {
 
 //	private final static int MAX_SMOOTHED_FREQ_CLASS = 5;

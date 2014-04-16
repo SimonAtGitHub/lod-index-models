@@ -2,6 +2,11 @@ package de.unikoblenz.west.ldim.eval.density;
 
 import java.util.TreeMap;
 
+/**
+ * @deprecated
+ * @author gottron
+ *
+ */
 public abstract class FrequencyAdjustedDistribution extends Distribution {
 
 	@Override

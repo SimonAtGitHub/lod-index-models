@@ -17,7 +17,7 @@ public class DistributionCompare {
 	public final static int ENTROPY_BASE = 2;
 
 	/**
-	 * Compute the perplexity of using the base distribution to approacimate the actual distribution
+	 * Compute the perplexity of using the base distribution to approximate the actual distribution
 	 * 
 	 * @param base
 	 * @param actual
