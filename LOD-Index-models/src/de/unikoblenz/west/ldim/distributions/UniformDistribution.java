@@ -1,4 +1,4 @@
-package de.unikoblenz.west.ldim.eval.density;
+package de.unikoblenz.west.ldim.distributions;
 
 /**
  * A distribution which actually ignores all observations and models a uniform

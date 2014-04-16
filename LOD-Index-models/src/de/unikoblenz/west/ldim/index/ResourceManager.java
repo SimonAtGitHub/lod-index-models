@@ -17,8 +17,8 @@ import de.unikoblenz.west.ldim.index.models.SchemExIndexing;
 import de.unikoblenz.west.ldim.index.models.SubjectHashIndex;
 import de.unikoblenz.west.ldim.index.models.TypeIndex;
 import de.unikoblenz.west.ldim.index.models.TypeSetIndexing;
-import de.unikoblenz.west.ldim.index.sorting.IndexSorting;
-import de.unikoblenz.west.ldim.index.sorting.NQuadSorting;
+import de.unikoblenz.west.ldim.io.sorting.IndexSorting;
+import de.unikoblenz.west.ldim.io.sorting.NQuadSorting;
 
 /**
  * The ResourceManager class manages data files, indices and their related files

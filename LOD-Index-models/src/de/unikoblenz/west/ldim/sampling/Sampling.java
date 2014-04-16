@@ -8,10 +8,10 @@ import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.TreeSet;
 
-import de.unikoblenz.west.ldim.index.sorting.DefaultSorting;
 import de.unikoblenz.west.ldim.io.NQuad;
 import de.unikoblenz.west.ldim.io.NQuadParser;
 import de.unikoblenz.west.ldim.io.NQuadWriter;
+import de.unikoblenz.west.ldim.io.sorting.DefaultSorting;
 import de.unikoblenz.west.ldim.tools.Utilities;
 
 public class Sampling {

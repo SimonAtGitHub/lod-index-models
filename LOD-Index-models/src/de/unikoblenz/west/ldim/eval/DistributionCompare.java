@@ -2,7 +2,7 @@ package de.unikoblenz.west.ldim.eval;
 
 import java.util.TreeSet;
 
-import de.unikoblenz.west.ldim.eval.density.Distribution;
+import de.unikoblenz.west.ldim.distributions.Distribution;
 
 /**
  * Various methods for comparing two distributions.

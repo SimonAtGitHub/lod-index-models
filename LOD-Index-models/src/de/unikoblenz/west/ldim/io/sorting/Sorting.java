@@ -1,4 +1,4 @@
-package de.unikoblenz.west.ldim.index.sorting;
+package de.unikoblenz.west.ldim.io.sorting;
 
 import java.io.BufferedReader;
 import java.io.File;

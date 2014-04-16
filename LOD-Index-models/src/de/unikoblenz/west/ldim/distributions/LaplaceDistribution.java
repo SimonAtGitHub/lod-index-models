@@ -1,4 +1,4 @@
-package de.unikoblenz.west.ldim.eval.density;
+package de.unikoblenz.west.ldim.distributions;
 
 /**
  * A distribution estimating probabilities on the basis of MLE and Laplace or

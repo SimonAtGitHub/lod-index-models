@@ -5,11 +5,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import de.unikoblenz.west.ldim.eval.density.DeletedInterpolationUnseenEstimator;
-import de.unikoblenz.west.ldim.eval.density.GoodTuringUnseenEstimator;
-import de.unikoblenz.west.ldim.eval.density.MLEDistribution;
-import de.unikoblenz.west.ldim.eval.density.OneUnseenEvent;
-import de.unikoblenz.west.ldim.eval.density.UnseenEventEstimator;
+import de.unikoblenz.west.ldim.distributions.DeletedInterpolationUnseenEstimator;
+import de.unikoblenz.west.ldim.distributions.GoodTuringUnseenEstimator;
+import de.unikoblenz.west.ldim.distributions.MLEDistribution;
+import de.unikoblenz.west.ldim.distributions.OneUnseenEvent;
+import de.unikoblenz.west.ldim.distributions.UnseenEventEstimator;
 
 /**
  * @deprecated

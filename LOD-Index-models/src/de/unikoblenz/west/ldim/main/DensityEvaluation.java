@@ -7,17 +7,17 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.TreeSet;
 
+import de.unikoblenz.west.ldim.distributions.DeletedInterpolationUnseenEstimator;
+import de.unikoblenz.west.ldim.distributions.Distribution;
+import de.unikoblenz.west.ldim.distributions.GoodTuringDistribution;
+import de.unikoblenz.west.ldim.distributions.GoodTuringUnseenEstimator;
+import de.unikoblenz.west.ldim.distributions.HeldOutDistribution;
+import de.unikoblenz.west.ldim.distributions.LaplaceDistribution;
+import de.unikoblenz.west.ldim.distributions.MLEDistribution;
+import de.unikoblenz.west.ldim.distributions.OneUnseenEvent;
+import de.unikoblenz.west.ldim.distributions.UniformDistribution;
+import de.unikoblenz.west.ldim.distributions.UnseenEventEstimator;
 import de.unikoblenz.west.ldim.eval.DistributionCompare;
-import de.unikoblenz.west.ldim.eval.density.DeletedInterpolationUnseenEstimator;
-import de.unikoblenz.west.ldim.eval.density.Distribution;
-import de.unikoblenz.west.ldim.eval.density.GoodTuringDistribution;
-import de.unikoblenz.west.ldim.eval.density.GoodTuringUnseenEstimator;
-import de.unikoblenz.west.ldim.eval.density.HeldOutDistribution;
-import de.unikoblenz.west.ldim.eval.density.LaplaceDistribution;
-import de.unikoblenz.west.ldim.eval.density.MLEDistribution;
-import de.unikoblenz.west.ldim.eval.density.OneUnseenEvent;
-import de.unikoblenz.west.ldim.eval.density.UniformDistribution;
-import de.unikoblenz.west.ldim.eval.density.UnseenEventEstimator;
 
 public class DensityEvaluation {
 

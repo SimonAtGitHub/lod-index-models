@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  * Parser for files in NQuad format. Reads single quads from the file and
  * provides them via a simple next() method. The parser is capable to directly
- * read from compressed files.
+ * read from gzip and zip compressed files.
  * 
  * @author Thomas Gottron
  * 

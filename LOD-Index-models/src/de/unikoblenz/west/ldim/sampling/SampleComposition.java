@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import de.unikoblenz.west.ldim.eval.density.Distribution;
+import de.unikoblenz.west.ldim.distributions.Distribution;
 
 /**
  * Abstract class for constructing a larger sample out of smaller samples. The

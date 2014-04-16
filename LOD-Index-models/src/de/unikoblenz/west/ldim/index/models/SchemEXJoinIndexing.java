@@ -7,9 +7,9 @@ import java.util.TreeSet;
 
 import de.unikoblenz.west.ldim.index.IndexWriter;
 import de.unikoblenz.west.ldim.index.join.Join;
-import de.unikoblenz.west.ldim.index.sorting.NQuadSorting;
 import de.unikoblenz.west.ldim.io.NQuad;
 import de.unikoblenz.west.ldim.io.NQuadParser;
+import de.unikoblenz.west.ldim.io.sorting.NQuadSorting;
 import de.unikoblenz.west.ldim.tools.Constants;
 
 public class SchemEXJoinIndexing {

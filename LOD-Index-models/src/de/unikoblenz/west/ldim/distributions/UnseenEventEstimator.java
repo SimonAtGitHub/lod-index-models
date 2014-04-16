@@ -1,4 +1,4 @@
-package de.unikoblenz.west.ldim.eval.density;
+package de.unikoblenz.west.ldim.distributions;
 
 /**
  * @deprecated
