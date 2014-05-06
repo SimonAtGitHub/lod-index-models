@@ -42,6 +42,7 @@ public class RandomSampleComposition extends SampleComposition {
 			result.add(sampled);
 			remaining.remove(choice);
 			currentSize += size;
+			System.out.println(size+"\t"+currentSize+" / "+maxSize+"\t"+sampled);
 			// Remove samples which are too big
 			this.cleanTooBig(remaining, maxSize - currentSize);
 		}

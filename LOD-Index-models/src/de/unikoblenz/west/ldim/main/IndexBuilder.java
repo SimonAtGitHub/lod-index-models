@@ -116,7 +116,7 @@ public class IndexBuilder {
 	
 	public static void printHelp() {
 		System.out.println("Usage:");
-		System.out.println("  java main.IndexBuilder <inputfile> [<aggregate> <index> ...]");
+		System.out.println("  java de.unikoblenz.west.ldim.main.IndexBuilder <inputfile> [<aggregate> <index> ...]");
 		System.out.println("where:");
 		System.out.println("  <inputfile>  Name of RDF input file in nquad format.");
 		System.out.println("  <aggegrate>  One or several inicators for aggregating indices (optional):");

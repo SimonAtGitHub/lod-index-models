@@ -39,6 +39,7 @@ public class GreedySampleComposition extends SampleComposition {
 		TreeSet<String> remaining = new TreeSet<String>();
 		remaining.addAll(this.getSampleReferences());
 		// remove all samples which are anyway too big
+		System.out.println("Cleaning too big distribs");
 		this.cleanTooBig(remaining, maxSize);
 		// iteratively select one atomic sample until the maxsize is reached or
 		// no more (suitable) atomic samples are available
@@ -46,7 +47,16 @@ public class GreedySampleComposition extends SampleComposition {
 			String selectedSample = null;
 			Distribution bestApprox = null;
 			double minCrossEntropy = Double.POSITIVE_INFINITY;
+			System.out.println("Searching "+remaining.size()+" options");
+			int cnt = 0;
 			for (String sample : remaining) {
+				cnt++;
+				if ( (cnt % 100) ==0) {
+					System.out.print(".");
+					if ( (cnt % 2000) ==0) {
+						System.out.println(" "+cnt);
+					}
+				}
 				Distribution sDist = this.getSampleDistribution(sample);
 				LaplaceDistribution composedDist = new LaplaceDistribution(
 						GreedySampleComposition.LAPLACE_LAMBDA);
@@ -67,6 +77,7 @@ public class GreedySampleComposition extends SampleComposition {
 			result.add(selectedSample);
 			remaining.remove(selectedSample);
 			currentSize += size;
+			System.out.println(size+"\t"+currentSize+" / "+maxSize+"\t"+minCrossEntropy+"\t"+selectedSample);
 			// Remove samples which are too big
 			this.cleanTooBig(remaining, maxSize - currentSize);
 		}
