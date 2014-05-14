@@ -24,6 +24,13 @@ public class QueryEvaluation {
 				eval.createResultsFile(resultF);
 			}
 			eval.appendResults(baseFile, newFile, resultF);
+		} else {
+			System.out.println("Usage:");
+			System.out.println("  java QueryEvaluation <baseindex> <newindex> <resultfile>");
+			System.out.println("where:");
+			System.out.println("  <baseindex>  The inverted index file used for the base index, i.e. using this index as approximation.");
+			System.out.println("  <newindex>   The inverted index file used for the new index, i.e. using this index as gold standard.");
+			System.out.println("  <resultfile> File to write the results to. The file will be created if it does not exist. Otherwsie the results are appended to the end of the file (new entry in a CSV table).");
 		}
 	}
 
